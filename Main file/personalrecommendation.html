@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+    <link rel="stylesheet" href="personalrecommendation.css">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="account.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body onload="onLoad()">
+    <header class="header">
+        <div class="logo">
+            <span class="Gym"><img src="Images/logo2.png" alt="Gymcraftlogo"></span>
+        </div>
+        <nav class="nav-menu" aria-label="Main Navigation">
+            <ul>
+                <li><a href="personalrecommendation.html">Home</a></li>
+                <li><a href="#workouts">Workout Plan</a></li>
+                <li><a href="#">Tracking</a></li>
+                <li><a href="#">Nutrition</a></li>
+                <li class="dropdown">
+                    <div class="account-icon" id="googleSignInButton" onclick="toggleDropdown()"
+                        aria-label="Sign in with Google">
+                        <!-- User Profile Image -->
+                        <img id="profileImage" src="Images/iconofprofilepicture.jpg" alt="User Profile Image"
+                            class="account-image">
+                    </div>
+                    <!-- Dropdown Menu -->
+                    <div class="dropdown-content" id="dropdownMenu" role="menu" aria-expanded="false">
+                        <a href="#" onclick="logout()" role="menuitem">Log Out</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="recommendations">
+            <h1>Recommended Routine</h1>
+
+            <!-- Personalized Workout Plan Section -->
+            <div class="heading">
+                <h2>Workout Plans</h2>
+            </div>
+            <section id="workouts" class="workout-section">
+                <!-- Tab buttons -->
+                <div class="tabs">
+                    <button class="tab-button active" onclick="showTab('newest')">Newest Workout</button>
+                    <button class="tab-button" onclick="showTab('top')">Top Workout</button>
+                </div>
+            
+                <!-- Workouts Cards -->
+                <div id="newest" class="tab-content active">
+                    <div class="workout-card">
+                        <img src="Images/worout1.jpg" alt="Avatar" class="avatar">
+                        <div class="workout-details">
+                            <div class="user-info">
+                                <span class="username">MacDonagh</span> - <span class="time">5 minutes ago</span>
+                            </div>
+                            <p class="workout-text">It's a good workout, considering the structure is well-balanced with proper
+                                recovery.</p>
+                            <span class="show-title">Strength Training - Beginner</span>
+                        </div>
+                    </div>
+                    <div class="workout-card">
+                        <img src="Images/worout3.jpg" alt="Avatar" class="avatar">
+                        <div class="workout-details">
+                            <div class="user-info">
+                                <span class="username">Squats</span> - <span class="time">5 minutes ago</span>
+                            </div>
+                            <p class="workout-text">A compound exercise that works your lower body, including your glutes, hamstrings, quadriceps, and calves.</p>
+                            <span class="show-title">Strength Training - Beginner</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="top" class="tab-content">
+                    <div class="workout-card">
+                        <img src="Images/worout2.png" alt="Avatar" class="avatar">
+                        <div class="workout-details">
+                            <div class="user-info">
+                                <span class="username">Vegitooo</span> - <span class="time">5 minutes ago</span>
+                            </div>
+                            <p class="workout-text">A great top-tier workout for building endurance 🔥</p>
+                            <span class="show-title">HIIT - Advanced</span>
+                        </div>
+                    </div>
+                    <div class="workout-card">
+                        <img src="Images/worout4.jpg" alt="Avatar" class="avatar">
+                        <div class="workout-details">
+                            <div class="user-info">
+                                <span class="username">Lunges</span> - <span class="time">5 minutes ago</span>
+                            </div>
+                            <p class="workout-text">A workout that helps gain muscle mass, build body strength, and tone your body.
+                            </p>
+                            <span class="show-title">HIIT - Advanced</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+<section class="tracking">
+    <div class="trackings-container">
+        <h2 class="title">Your Progress</h2>
+        <div class="current-date" id="currentDateTime"></div> <!-- Displaying current date -->
+
+        <!-- Tracking of your progress in days Navigation -->
+        <div class="nav-container">
+            <button class="nav-button" onclick="previousDay()">&lt;</button>
+            <div class="days" id="days-container">
+                <div class="day">
+                    <span class="day-name">Sun</span>
+                </div>
+                <div class="day">
+                    <span class="day-name">Mon</span>
+                </div>
+                <div class="day">
+                    <span class="day-name">Tue</span>
+                </div>
+                <div class="day">
+                    <span class="day-name">Wed</span>
+                </div>
+                <div class="day">
+                    <span class="day-name">Thu</span>
+                </div>
+                <div class="day">
+                    <span class="day-name">Fri</span>
+                </div>
+                <div class="day">
+                    <span class="day-name">Sat</span>
+                </div>
+            </div>
+            <button class="nav-button" onclick="nextDay()">&gt;</button>
+        </div>
+
+        <!-- Trackings -->
+        <div class="trackings">
+            <h3 class="trackings-title">Daily Activities</h3>
+            <div class="trackings-list" id="trackings-list"></div>
+        </div>
+    </div>
+</section>
+
+ <!-- Nutrition Guidance Section -->
+            <div class="section-container">
+                <h2>Nutrition Guidance</h2>
+                <div class="container">
+                    <div class="container-item">
+                        <p>Receive dietary recommendations and meal planning support to complement your fitness journey.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Gymcraft. All Rights Reserved.</p>
+    </footer>
+    <script src="workout.js"></script>
+    <script src="tracking.js"></script>
+</body>
+
+</html>

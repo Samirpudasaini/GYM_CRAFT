@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Login</h2>
+            <form id="loginForm" action="/information.html" method="POST">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="input-group">
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Retrieve registered credentials from localStorage
+            const storedUsername = localStorage.getItem('registeredUsername');
+            const storedPassword = localStorage.getItem('registeredPassword');
+
+            // Get user input
+            const inputUsername = document.getElementById('username').value;
+            const inputPassword = document.getElementById('password').value;
+
+            // Validate the username and password
+            if (inputUsername === storedUsername && inputPassword === storedPassword) {
+                // Redirect to information.html if credentials match
+                window.location.href = "information.html";
+            } else {
+                alert('Invalid username or password');
+            }
+        });
+    </script>
+</body>
+
+</html>
