@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym craft</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+       <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <span class="Gym"><img src="Images/logo.png" alt="Gymcraftlogo"></span>
+        </div>
+
+    <!-- Hamburger Icon for Mobile Menu -->
+        <button class="menu-toggle" aria-label="Toggle Navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="nav-menu">
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#aboutus">About Us</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="gallery">
+        <div class="gallery-container">
+            <img src="Images/image1.jpg" alt="image 1" class="gallery-image active">
+            <img src="Images/image2.webp" alt="image 2" class="gallery-image">
+            <img src="Images/iamge3.avif" alt="image 3" class="gallery-image">
+            <img src="Images/image4.webp" alt="image 4" class="gallery-image">
+            <img src="Images/image5.jpg" alt="image 5" class="gallery-image">
+            <img src="Images/image1.jpg" alt="image 1" class="gallery-image active">
+            <img src="Images/image2.webp" alt="image 2" class="gallery-image">
+            <img src="Images/iamge3.avif" alt="image 3" class="gallery-image">
+            <img src="Images/image4.webp" alt="image 4" class="gallery-image">
+            <img src="Images/image5.jpg" alt="image 5" class="gallery-image">
+            
+        </div>
+    
+        <button class="prev-btn">&lt;</button>
+        <button class="next-btn">&gt;</button>
+    
+        <div class="nav-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+    </section>
+    <section class="metrics">
+        <div class="quote-container">
+            <h1>Quote of the day</h1>
+            <p id="quote"></p>
+            <button id="new-quote">New Quote</button>
+        </div>
+        <script src="scripts.js"></script>
+    
+    </section>
+        <section id="aboutus" class="Aboutus">
+            <h2>About Us</h2>
+            <div class="Aboutus-container">
+                <div class="Aboutus-item left">
+                    <p>"In my role as the front-end developer for Gymcraft, I focus on creating an intuitive and engaging user
+                        interface. My goal is to ensure that users have a seamless experience when navigating the website,
+                        allowing
+                        them to easily track their progress."</p>
+                    <h4>Samir Pudasaini</h4>
+                </div>
+                <div class="Aboutus-item center">
+                    <p>"In my role as the back-end developer, I design and maintain the server-side logic that powers Gymcraft.
+                        I
+                        focus on implementing efficient APIs and managing data interactions to ensure a reliable and responsive
+                        experience for all users and for betterment of Gymcraft."</p>
+                    <h4>Mandip Dhungana</h4>
+                </div>
+                <div class="Aboutus-item right">
+                    <p>"As the database manager, I oversee the organization and security of user data within Gymcraft. My
+                        commitment to data integrity ensures that users can trust the app with their personal information as
+                        they track their fitness journeys and providing database encryption."</p>
+                    <h4>Jenisha Limbu</h4>
+                </div>
+            </div>  
+        </section>
+
+
+    <section id="features" class="features">
+        <h2>Key Features</h2>
+        <div class="features-container">
+            <div class="feature-item" id="workout-plan">
+                <h3>Personalized Workout Plan</h3>
+                <p>Get tailored exercise recommendations based on your fitness goals and progress.</p>
+            </div>
+            <div class="feature-item" id="progress-tracking">
+                <h3>Progress Tracking</h3>
+                <p>Track your workouts and see your progress over time!</p>
+            </div>
+            <div class="feature-item" id="nutrition-guidance">
+                <h3>Nutrition Guidance</h3>
+                <p >Receive dietary recommendations and meal planning support to complement your fitness journey.</p>
+            </div>
+        </div>
+    </section>
+
+ 
+    <div class="text-section">
+        <h1>We Are Here <br> For You!</h1>
+        <h1>Contact us for <br> Free <br> Consultation.</h1>
+        <p>Please don'  t hesitate, we will answer all your questions. <br> We want to give you the best service we can
+            provide.</p>
+        <h3>Get in touch</h3>
+        <p><a href="https://www.instagram.com/samir_pudasaini21/">
+            <button id="Instragram" type="submit">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </button></a></p>
+    </div>
+     
+  
+    <footer class="footer">
+        <p>&copy; 2024 Gymcraft. All Rights Reserved.</p>
+    </footer>
+    <script src="toggle.js"></script>
+</body>
+
+</html>

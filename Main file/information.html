@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informations - Gymcraft</title>
+    <link rel="stylesheet" href="informations.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Fill in Your Details</h2>
+            <form id="infoForm" action="/personalrecommendation.html" method="post">
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="goal">Fitness Goal</label>
+                    <select id="goal" name="goal" required>
+                        <option value="weight_loss">Weight Loss</option>
+                        <option value="muscle_gain">Muscle Gain</option>
+                        <option value="endurance">Endurance</option>
+                        <option value="flexibility">Flexibility</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="diet">Diet Preference</label>
+                    <select id="diet" name="diet" required>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="non_vegetarian">Non-Vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="injuries">Any Injuries?</label>
+                    <select id="injuries" name="injuries" required onchange="toggleInjuryDetails()">
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="input-group" id="injury-details-container" style="display: none;">
+                    <label for="injury-details">Please describe your injuries:</label>
+                    <textarea id="injury-details" name="injury-details" rows="4"
+                        placeholder="Describe your injuries here"></textarea>
+                </div>
+
+                <script>
+                    function toggleInjuryDetails() {
+                        const injurySelect = document.getElementById('injuries');
+                        const injuryDetailsContainer = document.getElementById('injury-details-container');
+
+                        if (injurySelect.value === 'yes') {
+                            injuryDetailsContainer.style.display = 'block'; // Show the textarea
+                        } else {
+                            injuryDetailsContainer.style.display = 'none';  // Hide the textarea
+                        }
+                    }
+                </script>
+
+                <div class="input-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('infoForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            // Simulating form submission success, then redirecting to the personal recommendation page
+            window.location.href = "personalrecommendation.html";
+        });
+    </script>
+</body>
+
+</html>

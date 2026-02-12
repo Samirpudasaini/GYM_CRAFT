@@ -1,0 +1,624 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', Helvetica, sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    padding-top: 80px;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.Gym img {
+    height: 70px;
+    width: 90px;
+    margin-right: 8px;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+    color: #007aff;
+}
+
+/* Profile Icon Styling */
+.account-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account-image {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-content {
+    display: none;
+    /* Initially hidden */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: center;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show dropdown on click */
+.show {
+    display: block;
+}
+a {
+    color: var(--primary-text-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--highlight-color);
+    text-decoration: underline;
+}
+
+.container-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.account-icon {
+    cursor: pointer;
+}
+
+.account-image {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+/* Dropdown styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Spinner Styling */
+.spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+}
+
+.spinner img {
+    width: 50px;
+    height: 50px;
+}
+/* Recommendations section */
+.recommendations {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.recommendations h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    color: #333;
+}
+.heading h2{
+    text-align: center;
+}
+/* Workout Section */
+.workout-section {
+    width: 80%;
+    max-width: 1200px;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    margin: 20px auto;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+.tab-button {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.tab-button:hover {
+    transform: scale(1.05);
+}
+
+.tab-button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #3b3b3b;
+    transition: background-color 0.3s;
+}
+
+.tab-button {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.tab-button.active {
+    background-color: #333;
+    color: #fff;
+}
+
+.tab-button:hover {
+    background-color: #007aff;
+    color: #fff;
+}
+
+
+/* Workout Cards */
+.workout-card {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+.workout-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.workout-details {
+    flex-grow: 1;
+}
+
+.user-info {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.workout-text {
+    margin-bottom: 10px;
+}
+
+.show-title {
+    color: #ff6584;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+input[type="checkbox"] {
+    width: 40px;
+    height: 20px;
+    background-color: #888;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.section-container {
+    margin-bottom: 30px;
+}
+
+.section-container h2 {
+    font-size: 1.8rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.container-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin-right: 10px;
+}
+
+.container-item:last-child {
+    margin-right: 0;
+}
+
+.container-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+:root {
+    --primary-bg-color: #333;
+    --primary-text-color: #ffffff;
+    --highlight-color: #007aff;
+    --light-bg-color: #f4f4f9;
+    --dark-text-color: #333;
+    --container-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+@media (max-width: 768px) {
+    .nav-menu ul {
+        flex-direction: column;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header {
+        padding: 10px;
+    }
+
+    .recommendations {
+        padding: 10px;
+    }
+}
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-button.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.workout-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.account-image {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.workout-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info {
+    font-weight: bold;
+}
+
+.tabs {
+    margin: 20px 0;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: lightgray;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.tab-button:hover {
+    background-color: #ddd;
+}
+@media (max-width: 1024px) {
+    .workout-section {
+        width: 90%;
+    }
+}
+/* Progress Tracking Section */
+.trackings-container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: var(--container-shadow);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: var(--dark-text-color);
+}
+
+/* Navigation for days */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.days {
+    display: flex;
+    gap: 10px;
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e0e0e0;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.day-name {
+    font-weight: bold;
+    color: var(--dark-text-color);
+}
+
+.day-date {
+    font-size: 0.8rem;
+    color: #555;
+}
+
+.day.active {
+    background-color: var(--highlight-color);
+    color: white;
+}
+
+.nav-button {
+    background-color: #e0e0e0;
+    color: var(--dark-text-color);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: var(--highlight-color);
+}
+
+/* Trackings */
+.trackings-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.current-date {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.nav-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #45a049;
+}
+
+.days {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.day {
+    text-align: center;
+    flex-grow: 1;
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.day.active {
+    background-color: #d1e7dd; /* Light Green */
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.day:hover {
+    background-color: #e9ecef; /* Light Gray */
+}
+
+.trackings {
+    margin-top: 20px;
+}
+
+.trackings-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.trackings-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.trackings-item {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.trackings-item:hover {
+    transform: scale(1.02);
+    background-color: #f1f1f1; /* Light background on hover */
+} 
+
+
